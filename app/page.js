@@ -1,10 +1,11 @@
 import ProgressBar from "@/app/clientComponents/ProgressBar";
 
 async function fetchHero(id = Math.floor(Math.random() * (730 - 1) + 1)) {
-  const apiToken = "1783ce1d5a619ad9a70829c9f95c3c0d"
-  const apiUrl = `https://superheroapi.com/api/${apiToken}/${id}`
-  return await fetch(apiUrl)
-    .then(res => res.json())
+  const apiToken = "1783ce1d5a619ad9a70829c9f95c3c0d";
+  const apiUrl = `https://superheroapi.com/api/${apiToken}/${id}`;
+
+  return await fetch(apiUrl, { cache: 'no-store' })
+    .then(res => res.json());
 }
 
 function HeroDetails({hero}) {
