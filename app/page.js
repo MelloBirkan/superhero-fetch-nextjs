@@ -16,7 +16,7 @@ function HeroDetails({hero}) {
     <li key={hero.id} className={"flex flex-col"}>
       <img src={hero.image.url}
            className="w-full h-[600px] rounded-2xl object-cover"/>
-      <div className={"flex flex-col h-56"}>
+      <div className={"flex flex-col h-60"}>
         <h3
           className="mt-6 text-lg/8 font-semibold text-gray-900">{hero.name}</h3>
         <p className="text-base/7 text-gray-600">{hero.work.occupation}</p>
