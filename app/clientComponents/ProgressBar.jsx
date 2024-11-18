@@ -23,7 +23,7 @@ export default function ProgressBar ({ progress = 45, color = 1 }) {
           return progress;
         }
       });
-    }, 20);
+    }, 40);
 
     return () => clearInterval(interval);
   }, [progress]);
